@@ -8,7 +8,7 @@ pipeline {
             }
             
         }
-        stage('Build'){
+        stage('Build and Test'){
             steps{
                 sh 'docker build . -t kubechandu7/node-todo-test:latest' 
             }
@@ -23,7 +23,7 @@ pipeline {
             }
             
         }
-        stage('Test'){
+        stage('Regression Test'){
             steps{
                 echo "Testing the build......No Test Cases" 
             }
